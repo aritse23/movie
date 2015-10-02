@@ -1,0 +1,54 @@
+
+body,
+header,
+h1 {
+	margin: 0 auto;
+	width: 100%;
+}
+
+header {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	color: rgba(210,0,0,1);
+	letter-spacing: 4px;	
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background: rgba(255,255,255,0.5);
+	position: absolute;
+	top: 45%;
+	width: 100%;
+	text-align: center;
+
+}
+
+h2.button_start {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: rgba(255,255,255,0.6);
+	position: absolute;
+	top: 75%;
+	width: 100%;
+	text-align: center;
+	display: block;
+	height: 35px;
+	width: 100px;
+	border: 5px solid;
+	border-radius: 15px;
+	padding-top: 4px;
+	left:50%;
+    margin-left:-50px;
+}
+
+h2.button_start:active {
+	background-color: rgba(210,0,0,1);
+}
+
+body {
+
+	background-image: url(../img/background/background_mobile_rotated.jpg);
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
