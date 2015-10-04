@@ -1,19 +1,42 @@
+/*General Layouts*/
+body {
+	background-image: url(../img/background/background_mobile_rotated.jpg);
+	background-color: #000;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	
+}
 
 body,
 header,
+footer,
 h1 {
 	margin: 0 auto;
 	width: 100%;
 }
 
-header {
+ul {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: 
+}
+/*Homepage layout
+-------------------------------------------------*/
+
+header.movie_homepage {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	color: rgba(210,0,0,1);
 	letter-spacing: 4px;	
 	padding-top: 1em;
 	padding-bottom: 1em;
-	background: rgba(255,255,255,0.5);
+	background: rgba(0,0,0,0.5);
 	position: absolute;
 	top: 45%;
 	width: 100%;
@@ -21,6 +44,7 @@ header {
 
 }
 
+/*start button*/
 h2.button_start {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
@@ -39,16 +63,221 @@ h2.button_start {
     margin-left:-50px;
 }
 
+/*Start button on click*/
 h2.button_start:active {
-	background-color: rgba(210,0,0,1);
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: rgba(210,0,0,1);
+	position: absolute;
+	top: 75%;
+	width: 100%;
+	text-align: center;
+	display: block;
+	height: 35px;
+	width: 100px;
+	border: 5px solid;
+	border-radius: 15px;
+	padding-top: 4px;
+	left:50%;
+    margin-left:-50px;
 }
 
-body {
+/*Container Layouts
+------------------------------------*/
 
-	background-image: url(../img/background/background_mobile_rotated.jpg);
-	background-repeat: no-repeat;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+/*Header icon*/
+header.movie_name {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	color: rgba(210,0,0,1);
+	letter-spacing: 4px;	
+	padding-top: 1em;
+	padding-bottom: 1em;
+	background: rgba(0,0,0,0.5);
+	position: absolute;
+	width: 100%;
+	text-align: center;
+}
+
+/*used for layer name*/
+h3 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 700;
+	color: rgba(255,255,255,.7);
+	position: absolute;
+	top: 15%;
+	width: 70%;
+	padding-left: 16%;
+}
+
+/*used for layer number*/
+h4 {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+	color: rgba(255,255,255,.7);
+	position: absolute;
+	top: 22%;
+	width: 70%;
+	padding-left: 16%;
+}
+
+/*Red underline for layer name*/
+hr {
+	width: 90%;
+	margin-left: 0;
+	background: rgba(210,0,0,1);
+	height: 3px;
+	border: 0;
+	position: absolute;
+	top: 23%;
+
+}
+
+/*content text*/
+p {
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	font-size: 18px;
+	color: #B2E2EB;
+	position: absolute;
+	top: 32%;
+	width: 70%;
+	padding-left: 16%;
+}
+
+/*Footer Layout*/
+footer {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin-bottom: 0;
+	background: rgba(0,0,0,0.5);
+	padding-top: 1em;
+}
+
+.nav_icons {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	-webkit-flex-direction: row;
+	-moz-flex-direction: row;
+	-ms-flex-direction: row;
+	-o-flex-direction: row;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.icons a img{
+	width:35px;
+	opacity: 0.5;
+}
+
+.icons a img:active {
+	opacity: 1;
+}
+
+
+/*Team Layer Layout
+---------------------------------*/
+.dreams {
+	font-family: 'Raleway', sans-serif;
+	font-size: 36px;
+	font-weight: 700;
+	color: rgba(255,255,255,0.5);	
+	list-style: none;
+	margin: 0;
+	padding-top: 55%;
+	padding-left: 5%
+
+}
+
+
+/*Limbo Layer Layout
+---------------------------------*/
+.video {
+	position: absolute;
+	top: 40%;
+	width: 100%;
+}
+
+.video video{
+	display: block;
+	width: 100%;
+}
+
+
+/*media queries
+---------------------------------------*/
+
+ /*if screen is wider than smartphone size*/
+@media only screen and (min-width: 480px) {
+
+	/*change to a landscape background image*/
+	body {
+		background: url(../img/background/background_desktop_1.jpg);
+		background-repeat: no-repeat;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		background-color: #000;
+	}
+	
+	/*increase left padding of text and headings*/
+	h3,
+	h4,
+	p {
+		padding-left: 20%;
+	}
+
+	/*team layout desktop*/
+	.dreams {
+		font-size: 50px;
+		
+		padding-top: 20%;
+		padding-left: 15%;
+
+	}
+
+	/*limbo layout desktop*/
+	.video {
+		top: 30%;
+		width: 100%;
+	}
+	.video video{
+		display: block;
+		margin: 0 auto;
+		width: 60%;
+	}
+
+}
+
+/*layer control
+---------------------------------------*/
+.homepage {
+	/*display: none;*/
+}
+.container{
+	/*display: none;*/
+}
+
+.idea {
+	/*display: none;*/
+}
+
+.team{
+	/*display: none;*/
+}
+
+.extraction{
+	/*display: none;*/
+}
+
+.subconscious{
+	/*display: none;*/
+}
+
+.limbo{
+	/*display: none;*/
 }
