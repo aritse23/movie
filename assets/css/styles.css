@@ -1,8 +1,9 @@
 /*General Layouts*/
 body {
-	background-image: url(../img/background/background_mobile_rotated.jpg);
+	
 	background-color: #000;
-	background-repeat: no-repeat;
+	background: url(../img/background/background_mobile_rotated.jpg) center;
+	height: 100vh;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -138,7 +139,7 @@ p {
 	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
-	color: #B2E2EB;
+	color: #98b7c1;
 	position: absolute;
 	top: 32%;
 	width: 70%;
@@ -177,6 +178,19 @@ footer {
 	opacity: 1;
 }
 
+.kick:active {
+	transition: transform 0.5s;
+	transform: rotate(-45deg);
+}
+
+/*Plot Layer Layout
+---------------------------------*/
+.plot_text {
+	height: 50%;
+	overflow: auto;
+	scrollbar-arrow-color:red;
+}
+
 
 /*Team Layer Layout
 ---------------------------------*/
@@ -192,8 +206,32 @@ footer {
 
 }
 
+/*Downloads Layer Layout
+--------------------------------*/
+.downloads_icons {
+	list-style: none;
+	margin: 0;
+	padding-top: 55%;
+	padding-left: 5%;
+}
+.downloads_icons li {
+	padding-top: 2em;
+}
 
-/*Limbo Layer Layout
+/*Gallery Layer Layout
+---------------------------------*/
+.gallery_icons {
+	list-style: none;
+	margin: 0;
+	padding-top: 55%;
+	padding-left: 5%;
+}
+.gallery_icons li {
+	padding-top: 2em;
+}
+
+
+/*Trailer Layer Layout
 ---------------------------------*/
 .video {
 	position: absolute;
@@ -211,17 +249,16 @@ footer {
 ---------------------------------------*/
 
  /*if screen is wider than smartphone size*/
-@media only screen and (min-width: 480px) {
+@media screen and (min-width: 480px) {
 
 	/*change to a landscape background image*/
 	body {
-		background: url(../img/background/background_desktop_1.jpg);
-		background-repeat: no-repeat;
+		background: url(../img/background/background_desktop_1.jpg) center;
+		height: 100vh;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
-		background-color: #000;
 	}
 	
 	/*increase left padding of text and headings*/
@@ -230,7 +267,9 @@ footer {
 	p {
 		padding-left: 20%;
 	}
-
+	p {
+		width: 60%;
+	}
 	/*team layout desktop*/
 	.dreams {
 		font-size: 50px;
@@ -240,7 +279,7 @@ footer {
 
 	}
 
-	/*limbo layout desktop*/
+	/*Trailer layout desktop*/
 	.video {
 		top: 30%;
 		width: 100%;
@@ -262,7 +301,7 @@ footer {
 	/*display: none;*/
 }
 
-.idea {
+.plot {
 	/*display: none;*/
 }
 
@@ -270,14 +309,14 @@ footer {
 	/*display: none;*/
 }
 
-.extraction{
+.downloads{
 	/*display: none;*/
 }
 
-.subconscious{
+.gallery{
 	/*display: none;*/
 }
 
-.limbo{
+.trailer{
 	/*display: none;*/
 }
