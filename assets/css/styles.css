@@ -249,7 +249,7 @@ footer {
 ---------------------------------------*/
 
  /*if screen is wider than smartphone size*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 960px) {
 
 	/*change to a landscape background image*/
 	body {
