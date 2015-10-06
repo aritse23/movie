@@ -25,7 +25,7 @@ ul {
 }
 a {
 	text-decoration: none;
-	color: 
+	outline: none;
 }
 /*Homepage layout
 -------------------------------------------------*/
@@ -146,7 +146,8 @@ p {
 	padding-left: 16%;
 }
 
-/*Footer Layout*/
+/*Footer Layout
+---------------------------------*/
 footer {
 	position: absolute;
 	width: 100%;
@@ -155,7 +156,9 @@ footer {
 	background: rgba(0,0,0,0.5);
 	padding-top: 1em;
 }
-
+.nav_bar {
+	z-index: -1;
+}
 .nav_icons {
 	display: flex;
 	list-style: none;
@@ -182,6 +185,47 @@ footer {
 	transition: transform 0.5s;
 	transform: rotate(-45deg);
 }
+
+/*Nav Menu Layout
+--------------------------------*/
+.nav_menu {	
+	position: relative;
+	background: rgba(0,0,0,.5);
+	height: 95vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 1;
+}
+.nav_list li a img {
+	width: 70px;
+}
+.nav_list li a {
+	text-decoration: none;
+	color: rgba(255,255,255,1);
+}
+
+.nav_list li a:hover,
+.nav_list li a:active {
+	color: rgba(210,0,0,1);
+}
+
+.nav_list {
+	font-family:'Raleway', sans-serif;
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: absolute;
+	left: 50%;
+	height: 95vh;
+	margin-left: -80px;
+	font-size: 24px;
+	opacity: 0.5;
+	text-align: center;
+}
+
 
 /*Plot Layer Layout
 ---------------------------------*/
@@ -292,6 +336,16 @@ footer {
 
 }
 
+
+/*for javascript
+----------------------------------------*/
+
+.accessibly_hidden {
+	display: none;
+}
+
+
+
 /*layer control
 ---------------------------------------*/
 .homepage {
@@ -320,3 +374,7 @@ footer {
 .trailer{
 	/*display: none;*/
 }
+
+
+
+
