@@ -1,0 +1,11 @@
+paragraphs
+==========
+- Font color
+- text spacing
+
+nav
+===========
+-slidein effect
+-kick needs to go previous instead of next
+-always flicks bacak to plot page when a link is clicked
+-nav menu needs to disappear after clicking an item

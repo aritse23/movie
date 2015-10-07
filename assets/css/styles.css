@@ -1,6 +1,6 @@
 /*General Layouts*/
 body {
-	
+	font-family: 'Raleway', sans-serif;
 	background-color: #000;
 	background: url(../img/background/background_mobile_rotated.jpg) center;
 	height: 100vh;
@@ -19,7 +19,7 @@ h1 {
 	width: 100%;
 }
 
-ul {
+ul, {
 	margin: 0;
 	padding: 0;
 }
@@ -31,7 +31,7 @@ a {
 -------------------------------------------------*/
 
 header.movie_homepage {
-	font-family: 'Raleway', sans-serif;
+	
 	font-weight: 700;
 	color: rgba(210,0,0,1);
 	letter-spacing: 4px;	
@@ -47,7 +47,6 @@ header.movie_homepage {
 
 /*start button*/
 h2.button_start {
-	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	color: rgba(255,255,255,0.6);
 	position: absolute;
@@ -66,8 +65,6 @@ h2.button_start {
 
 /*Start button on click*/
 h2.button_start:active {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 400;
 	color: rgba(210,0,0,1);
 	position: absolute;
 	top: 75%;
@@ -88,38 +85,36 @@ h2.button_start:active {
 
 /*Header icon*/
 header.movie_name {
-	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	color: rgba(210,0,0,1);
 	letter-spacing: 4px;	
 	padding-top: 1em;
 	padding-bottom: 1em;
 	background: rgba(0,0,0,0.5);
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	text-align: center;
+	z-index: 1000;
 }
 
 /*used for layer name*/
 h3 {
-	font-family: 'Raleway', sans-serif;
 	font-weight: 700;
 	color: rgba(255,255,255,.7);
 	position: absolute;
-	top: 15%;
+	top: 4em;
 	width: 70%;
-	padding-left: 16%;
+	left: 16%;
 }
 
 /*used for layer number*/
 h4 {
-	font-family: 'Raleway', sans-serif;
 	font-weight: 500;
 	color: rgba(255,255,255,.7);
 	position: absolute;
-	top: 22%;
+	top: 7em;
 	width: 70%;
-	padding-left: 16%;
+	left: 16%;
 }
 
 /*Red underline for layer name*/
@@ -130,31 +125,31 @@ hr {
 	height: 3px;
 	border: 0;
 	position: absolute;
-	top: 23%;
+	top: 7em;
 
 }
 
+
 /*content text*/
 p {
-	font-family: 'Raleway', sans-serif;
 	font-weight: 400;
 	font-size: 18px;
 	color: #98b7c1;
 	position: absolute;
-	top: 32%;
+	top: 9em;
 	width: 70%;
-	padding-left: 16%;
+	left: 16%;
 }
 
 /*Footer Layout
 ---------------------------------*/
 footer {
-	position: absolute;
+	position: fixed;
 	width: 100%;
 	bottom: 0;
-	margin-bottom: 0;
 	background: rgba(0,0,0,0.5);
 	padding-top: 1em;
+	z-index: 1000;
 }
 .nav_bar {
 	z-index: -1;
@@ -199,7 +194,7 @@ footer {
 	z-index: 1;
 }
 .nav_list li a img {
-	width: 70px;
+	width: 35px;
 }
 .nav_list li a {
 	text-decoration: none;
@@ -212,25 +207,32 @@ footer {
 }
 
 .nav_list {
-	font-family:'Raleway', sans-serif;
 	font-weight: 500;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
 	position: absolute;
 	left: 50%;
-	height: 95vh;
-	margin-left: -80px;
+	height: 90vh;
+	margin-left: -120px;
 	font-size: 24px;
 	opacity: 0.5;
 	text-align: center;
 }
 
+.section-content {
+    clear:both;
+}
+
+section {
+	height: 100vh;
+	position: relative;
+}
 
 /*Plot Layer Layout
 ---------------------------------*/
-#plot {
-	height: 100vh;
+#plot{
+	
 }
 .plot_text {
 	height: 50%;
@@ -238,34 +240,19 @@ footer {
 	scrollbar-arrow-color:red;
 }
 
-/*Test*/
-.test {
-	height: 100vh;
-}
-
-
 /*Team Layer Layout
 ---------------------------------*/
 #team {
-	height: 100vh;
+	
+	
 }
 
-.dreams {
-	font-family: 'Raleway', sans-serif;
-	font-size: 36px;
-	font-weight: 700;
-	color: rgba(255,255,255,0.5);	
-	list-style: none;
-	margin: 0;
-	padding-top: 55%;
-	padding-left: 5%
 
-}
 
 /*Downloads Layer Layout
 --------------------------------*/
 #downloads {
-	height: 100vh;
+	
 }
 
 .downloads_icons {
@@ -281,7 +268,7 @@ footer {
 /*Gallery Layer Layout
 ---------------------------------*/
 #gallery {
-	height: 100vh;
+	
 }
 
 .gallery_icons {
@@ -298,7 +285,8 @@ footer {
 /*Trailer Layer Layout
 ---------------------------------*/
 #trailer {
-	height: 100vh;
+	
+	
 }
 
 .video {
@@ -379,24 +367,24 @@ footer {
 	/*display: none;*/
 }
 
-.plot {
+#plot {
 	/*display: none;*/
 }
 
-.team{
-	display: none;
+#team{
+	/*display: none;*/
 }
 
-.downloads{
-	display: none;
+#downloads{
+	/*display: none;*/
 }
 
-.gallery{
-	display: none;
+#gallery{
+	/*display: none;*/
 }
 
-.trailer{
-	display: none;
+#trailer{
+	/*display: none;*/
 }
 
 
