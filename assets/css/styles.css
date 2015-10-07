@@ -229,15 +229,27 @@ footer {
 
 /*Plot Layer Layout
 ---------------------------------*/
+#plot {
+	height: 100vh;
+}
 .plot_text {
 	height: 50%;
 	overflow: auto;
 	scrollbar-arrow-color:red;
 }
 
+/*Test*/
+.test {
+	height: 100vh;
+}
+
 
 /*Team Layer Layout
 ---------------------------------*/
+#team {
+	height: 100vh;
+}
+
 .dreams {
 	font-family: 'Raleway', sans-serif;
 	font-size: 36px;
@@ -252,6 +264,10 @@ footer {
 
 /*Downloads Layer Layout
 --------------------------------*/
+#downloads {
+	height: 100vh;
+}
+
 .downloads_icons {
 	list-style: none;
 	margin: 0;
@@ -264,6 +280,10 @@ footer {
 
 /*Gallery Layer Layout
 ---------------------------------*/
+#gallery {
+	height: 100vh;
+}
+
 .gallery_icons {
 	list-style: none;
 	margin: 0;
@@ -277,6 +297,10 @@ footer {
 
 /*Trailer Layer Layout
 ---------------------------------*/
+#trailer {
+	height: 100vh;
+}
+
 .video {
 	position: absolute;
 	top: 40%;
@@ -360,19 +384,19 @@ footer {
 }
 
 .team{
-	/*display: none;*/
+	display: none;
 }
 
 .downloads{
-	/*display: none;*/
+	display: none;
 }
 
 .gallery{
-	/*display: none;*/
+	display: none;
 }
 
 .trailer{
-	/*display: none;*/
+	display: none;
 }
 
 
