@@ -19,7 +19,7 @@ h1 {
 	width: 100%;
 }
 
-ul, {
+ul {
 	margin: 0;
 	padding: 0;
 }
@@ -96,7 +96,9 @@ header.movie_name {
 	text-align: center;
 	z-index: 1000;
 }
-
+h1 a {
+	color: rgba(210,0,0,1);
+}
 /*used for layer name*/
 h3 {
 	font-weight: 700;
@@ -220,9 +222,7 @@ footer {
 	text-align: center;
 }
 
-.section-content {
-    clear:both;
-}
+
 
 section {
 	height: 100vh;
@@ -234,17 +234,52 @@ section {
 #plot{
 	
 }
-.plot_text {
-	height: 50%;
+.content {
+	height: 45%;
 	overflow: auto;
-	scrollbar-arrow-color:red;
 }
 
-/*Team Layer Layout
+/*Characters Layer Layout
 ---------------------------------*/
-#team {
+#characters {
 	
-	
+}
+
+.char_list {
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	list-style: none;
+	position: absolute;
+	top: 10em;
+	padding-left: 16%;
+	margin: 0;
+	width: 68%;
+	height: 45%;
+
+}
+
+.char_list img{
+	width: 61px;
+}
+
+.char_flex1 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.char_flex2 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.char_flex3 {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 
 
@@ -326,7 +361,7 @@ section {
 	p {
 		width: 60%;
 	}
-	/*team layout desktop*/
+	/*characters layout desktop*/
 	.dreams {
 		font-size: 50px;
 		
@@ -371,7 +406,7 @@ section {
 	/*display: none;*/
 }
 
-#team{
+#characters{
 	/*display: none;*/
 }
 
