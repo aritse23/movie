@@ -1,0 +1,21 @@
+body {
+	font: 19px  Arial, Helvetica, sans-serif;
+	color:#ecedef;
+	position:relative;
+	text-align: center;
+	background: #334960;
+}
+.section {
+	background-color:gray; 
+	height:440px; 
+	margin-bottom:20px;
+}
+.navigation {
+	position:fixed; 
+	right:50px; 
+	top:10px;
+}
+.display{
+	color: #fff;
+	text-decoration: none;
+}
