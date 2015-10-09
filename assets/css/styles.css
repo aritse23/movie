@@ -194,7 +194,23 @@ footer {
 	-o-background-size: cover;
 	background-size: cover;
 	z-index: 1;
+	display: none;
 }
+
+.nav_list {
+	font-weight: 500;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	position: absolute;
+	height: 100%;
+	left: 50%;
+	margin-left: -80px;
+	font-size: 24px;
+	opacity: 0.5;
+	text-align: center;
+}
+
 .nav_list li a img {
 	width: 35px;
 }
@@ -208,19 +224,7 @@ footer {
 	color: rgba(210,0,0,1);
 }
 
-.nav_list {
-	font-weight: 500;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	position: absolute;
-	left: 50%;
-	height: 90vh;
-	margin-left: -120px;
-	font-size: 24px;
-	opacity: 0.5;
-	text-align: center;
-}
+
 
 
 
@@ -252,11 +256,12 @@ section {
 	justify-content: space-between;
 	list-style: none;
 	position: absolute;
-	top: 10em;
+	
 	padding-left: 16%;
 	margin: 0;
 	width: 68%;
-	height: 45%;
+	top: 35%;
+	height: 43%;
 
 }
 
@@ -287,35 +292,55 @@ section {
 /*Downloads Layer Layout
 --------------------------------*/
 #downloads {
-	
+		
+}
+.download_content{
+	position: absolute;
+	top: 12em;
+	padding-left: 16%;
+	margin: 0;
+	width: 68%;
+	top: 35%;
+	height: 43%;
+	overflow: auto;
 }
 
-.downloads_icons {
+.download_content ul{
 	list-style: none;
-	margin: 0;
-	padding-top: 55%;
-	padding-left: 5%;
 }
-.downloads_icons li {
-	padding-top: 2em;
+
+.download_content img{
+	width: 60px;
 }
+
 
 /*Gallery Layer Layout
 ---------------------------------*/
 #gallery {
 	
 }
-
-.gallery_icons {
-	list-style: none;
+.gallery_content{
+	position: absolute;	
+	padding-left: 16%;
 	margin: 0;
-	padding-top: 55%;
-	padding-left: 5%;
-}
-.gallery_icons li {
-	padding-top: 2em;
+	width: 68%;
+	top: 35%;
+	height: 43%;
+	overflow: auto;
 }
 
+.gallery_content ul{
+	list-style: none;
+}
+.gallery_content img{
+	
+}
+.screenshot_list img{
+	width: 60px;
+}
+.behind_list img{
+	width: 60px;
+}
 
 /*Trailer Layer Layout
 ---------------------------------*/
