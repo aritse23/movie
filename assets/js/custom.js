@@ -1,5 +1,19 @@
 document.addEventListener("DOMContentLoaded",function(){
 	
+	//<====================NAVIGATION MENU============================>
+	//toggles the navigation menu to show and hide
+	$(".menu").click(function(){
+		$(".nav_menu").slideToggle("slow");
+	})
+
+	$(".nav_links").click(function(){
+		$(".nav_menu").slideToggle("slow");
+	})
+	//prevents all a tags in class .prevent from linking anywhere
+	$(".prevent a").click(function(e){
+		e.preventDefault();
+	})
+
 
 	//<==============NAVIGATION JUMP EFFECT===========================>
 
