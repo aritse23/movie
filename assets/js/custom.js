@@ -10,9 +10,9 @@ document.addEventListener("DOMContentLoaded",function(){
 		$(".nav_menu").slideToggle("slow");
 	})
 	//prevents all a tags in class .prevent from linking anywhere
-	$(".prevent a").click(function(e){
-		e.preventDefault();
-	})
+	// $(".prevent a").click(function(e){
+	// 	e.preventDefault();
+	// })
 
 
 	//<==============NAVIGATION JUMP EFFECT===========================>
@@ -51,6 +51,87 @@ document.addEventListener("DOMContentLoaded",function(){
 	});
 	
 	//<==============CHARACTERS MODAL======================>
-	
+
+	//$("body").append($overlay);
+	var $overlay = $("#overlay");
+	$("#characters").append($overlay);
+	$(".char_list a img").click(function(event){
+		event.preventDefault();
+		var imgAlt = $(this).attr("alt");
+		
+		if (imgAlt=="cobb"){
+			$overlay.append($(".cobb"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .cobb").remove();
+		 	});		
+		} else if(imgAlt=="mal"){
+			$overlay.append($(".mal"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .mal").remove();
+		 	});	
+		} else if(imgAlt=="arthur"){
+			$overlay.append($(".arthur"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .arthur").remove();
+		 	});	
+		} else if(imgAlt=="ariadne"){
+			$overlay.append($(".ariadne"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .ariadne").remove();
+		 	});	
+		} else if(imgAlt=="eames"){
+			$overlay.append($(".eames"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .eames").remove();
+		 	});	
+		} else if(imgAlt=="saito"){
+			$overlay.append($(".saito"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .saito").remove();
+		 	});	
+		} else if(imgAlt=="fischer"){
+			$overlay.append($(".fischer"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .fischer").remove();
+		 	});	
+		} else if(imgAlt=="yusuf"){
+			$overlay.append($(".yusuf"));
+			$overlay.show();
+			$(".exit").click(function(event){
+				event.preventDefault();
+		 		$overlay.hide();
+		 		$("#overlay .yusuf").remove();
+		 	});	
+		}
+
+		
+		
+	});
+
+		 	
+		
+			
+			
 
 });
