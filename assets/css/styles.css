@@ -121,7 +121,7 @@ h4 {
 
 /*Red underline for layer name*/
 hr {
-	width: 90%;
+	width: 96%;
 	margin-left: 0;
 	background: rgba(210,0,0,1);
 	height: 3px;
@@ -135,8 +135,8 @@ hr {
 /*content text*/
 p {
 	font-weight: 400;
-	font-size: 18px;
-	color: #98b7c1;
+	font-size: 16px;
+	color: #c7dde4;
 	position: absolute;
 	top: 9em;
 	width: 70%;
@@ -236,7 +236,11 @@ section {
 /*Plot Layer Layout
 ---------------------------------*/
 #plot{
-	
+	background: url(../img/background/background_mobile_rotated_1.jpg) center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .content {
 	height: 45%;
@@ -246,9 +250,12 @@ section {
 /*Characters Layer Layout
 ---------------------------------*/
 #characters {
-	
+	background: url(../img/background/background_mobile_rotated_2.jpg) center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
-
 .char_list {
 
 	display: flex;
@@ -260,7 +267,7 @@ section {
 	padding-left: 16%;
 	margin: 0;
 	width: 68%;
-	top: 35%;
+	top: 40%;
 	height: 43%;
 
 }
@@ -269,29 +276,13 @@ section {
 	width: 61px;
 }
 
-.char_flex1 {
+.flex {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
 }
 
-.char_flex2 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-.char_flex3 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-#char_bio{
-	display: none;
-}
-
-#overlay {
+.bio {
 	height: 100vh;
 	width: 100%;
 	background: rgba(0,0,0, 0.8);
@@ -302,18 +293,61 @@ section {
 	display: none;
 }
 
+.exit img{
+	width: 50px;
+	margin-left: 80%;	
+	opacity: 0.5;
+}
+.exit img:active {
+	opacity: 1;
+}
+.bio p img{
+	width: 98%;
+
+}
+
+.bio p {
+	font-weight: 400;
+	font-size: 15px;
+	color: #c7dde4;
+	position: absolute;
+	top: 8em;
+	width: 80%;
+	height: 65%;
+	left: 16%;
+	overflow: auto;
+}
+
+.bio h3 {
+	top: 2em;	
+}
+
+/*used for layer number*/
+.bio h4 {	
+	top: 5em;
+}
+
+/*Red underline for layer name*/
+.bio hr {	
+	top: 5em;
+}
+
 /*Downloads Layer Layout
 --------------------------------*/
 #downloads {
-		
+	background: url(../img/background/background_mobile_rotated_3.jpg) center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .download_content{
+
 	position: absolute;
 	top: 12em;
 	padding-left: 16%;
 	margin: 0;
-	width: 68%;
-	top: 35%;
+	width: 80%;
 	height: 43%;
 	overflow: auto;
 }
@@ -323,21 +357,59 @@ section {
 }
 
 .download_content img{
-	width: 60px;
+	width: 200px;
+}
+.side_button {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	top: 12em;
+	left: 10px;
+	height: 43%;
+	z-index: 1000;
+
+}
+.side_button img {
+	width: 25px;
+	opacity: 0.5;
+}
+.side_button a img:active{
+	opacity: 1;
+}
+
+.type {
+	top: 9em;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	letter-spacing: 3px;
+	background: rgba(0,0,0,0.8);
+	width: 80%;
+}
+
+.posters,
+.soundtracks,
+.poster_text,
+.soundtrack_text {
+	display: none;
 }
 
 
 /*Gallery Layer Layout
 ---------------------------------*/
 #gallery {
-	
+	background: url(../img/background/background_mobile_rotated_4.jpg) center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 .gallery_content{
-	position: absolute;	
+	position: absolute;
+	top: 12em;
 	padding-left: 16%;
 	margin: 0;
-	width: 68%;
-	top: 35%;
+	width: 80%;
 	height: 43%;
 	overflow: auto;
 }
@@ -346,19 +418,40 @@ section {
 	list-style: none;
 }
 .gallery_content img{
-	
+	width: 200px;
 }
-.screenshot_list img{
-	width: 60px;
+
+.side_button1 {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	top: 12em;
+	left: 10px;
+	height: 43%;
+	z-index: 1000;
 }
-.behind_list img{
-	width: 60px;
+.side_button1 img {
+	width: 25px;
+	opacity: 0.5;
+}
+.side_button1 a img:active{
+	opacity: 1;
+}
+
+.behind_scenes,
+.behind_text {
+	display: none;
 }
 
 /*Trailer Layer Layout
 ---------------------------------*/
 #trailer {
-	
+	background: url(../img/background/background_mobile_rotated_5.jpg) center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 	
 }
 
@@ -421,16 +514,6 @@ section {
 
 }
 
-
-/*for javascript
-----------------------------------------*/
-
-.accessibly_hidden {
-	display: none;
-}
-
-
-
 /*layer control
 ---------------------------------------*/
 .homepage {
@@ -459,7 +542,3 @@ section {
 #trailer{
 	/*display: none;*/
 }
-
-
-
-

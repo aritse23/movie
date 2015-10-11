@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded",function(){
 	
 	//<====================NAVIGATION MENU============================>
 	//toggles the navigation menu to show and hide
-	$(".menu").click(function(){
+	$(".menu").click(function(event){
+		event.preventDefault();
 		$(".nav_menu").slideToggle("slow");
 	})
 
@@ -53,84 +54,115 @@ document.addEventListener("DOMContentLoaded",function(){
 	//<==============CHARACTERS MODAL======================>
 
 	//$("body").append($overlay);
-	var $overlay = $("#overlay");
-	$("#characters").append($overlay);
+	//var $overlay = $("#overlay");
+	//$("#characters").append($overlay);
 	$(".char_list a img").click(function(event){
 		event.preventDefault();
 		var imgAlt = $(this).attr("alt");
 		
 		if (imgAlt=="cobb"){
-			$overlay.append($(".cobb"));
-			$overlay.show();
+			//$overlay.append($(".cobb"));
+			$(".cobb").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .cobb").remove();
+		 		$(".cobb").hide();
+		 		//$("#overlay .cobb").remove();
 		 	});		
 		} else if(imgAlt=="mal"){
-			$overlay.append($(".mal"));
-			$overlay.show();
+			$(".mal").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .mal").remove();
+		 		$(".mal").hide();
 		 	});	
 		} else if(imgAlt=="arthur"){
-			$overlay.append($(".arthur"));
-			$overlay.show();
+			$(".arthur").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .arthur").remove();
+		 		$(".arthur").hide();
 		 	});	
 		} else if(imgAlt=="ariadne"){
-			$overlay.append($(".ariadne"));
-			$overlay.show();
+			$(".ariadne").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .ariadne").remove();
+		 		$(".ariadne").hide();
 		 	});	
 		} else if(imgAlt=="eames"){
-			$overlay.append($(".eames"));
-			$overlay.show();
+			$(".eames").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .eames").remove();
+		 		$(".eames").hide();
 		 	});	
 		} else if(imgAlt=="saito"){
-			$overlay.append($(".saito"));
-			$overlay.show();
+			$(".saito").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .saito").remove();
+		 		$(".saito").hide();
 		 	});	
 		} else if(imgAlt=="fischer"){
-			$overlay.append($(".fischer"));
-			$overlay.show();
+			$(".fischer").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .fischer").remove();
+		 		$(".fischer").hide();
 		 	});	
 		} else if(imgAlt=="yusuf"){
-			$overlay.append($(".yusuf"));
-			$overlay.show();
+			$(".yusuf").show();
 			$(".exit").click(function(event){
 				event.preventDefault();
-		 		$overlay.hide();
-		 		$("#overlay .yusuf").remove();
+		 		$(".yusuf").hide();
 		 	});	
 		}
 
 		
 		
 	});
+	
+	//<=============DOWNLOADS TABS===============>
+	$(".side_button a img").click(function(event){
+		event.preventDefault();
+		var imgAlt = $(this).attr("alt");
+		if (imgAlt=="wallpapers"){
+			$(".wallpapers").show();
+			$(".posters").hide();
+			$(".soundtracks").hide();
+			$(".wallpaper_text").show();
+			$(".poster_text").hide();
+			$(".soundtrack_text").hide();
+			
 
+		} else if (imgAlt=="posters"){
+			$(".posters").show();
+			$(".wallpapers").hide();
+			$(".soundtracks").hide();
+			$(".poster_text").show();
+			$(".wallpaper_text").hide();			
+			$(".soundtrack_text").hide();
+		} else if (imgAlt=="soundtracks"){
+			$(".soundtracks").show();
+			$(".wallpapers").hide();
+			$(".posters").hide();
+			$(".soundtrack_text").show();
+			$(".wallpaper_text").hide();
+			$(".poster_text").hide();			
+		}
+	});
 		 	
-		
+	
+	//<=============DOWNLOADS TABS===============>
+	$(".side_button1 a img").click(function(event){
+		event.preventDefault();
+		var imgAlt = $(this).attr("alt");
+		if (imgAlt=="screenshots"){
+			$(".screenshots").show();
+			$(".behind_scenes").hide();
+			$(".screenshot_text").show();
+			$(".behind_text").hide();
+		} else if (imgAlt=="behind the scenes"){
+			$(".behind_scenes").show();
+			$(".screenshots").hide();
+			$(".behind_text").show();
+			$(".screenshot_text").hide();
+		}
+	});
 			
 			
 
