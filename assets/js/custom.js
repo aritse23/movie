@@ -49,8 +49,43 @@ document.addEventListener("DOMContentLoaded",function(){
 	               $prev.addClass('current');
 	        });
 	  	}
+
+
 	});
 	
+	//<===============NAV MENU=========================>
+	$(".nav_links").on("click",function(){
+		var new_current = $(this).attr("href");	//creates variable named imgLoc which stores the clicked link's href
+	    
+	    alert($(".current").attr("id"));
+	    $(".current").removeClass("current");
+	    if(new_current == "#plot"){
+	    	alert(new_current);
+	    	$("#plot").addClass("current");
+	    } else if (new_current == "#characters"){
+	    	alert(new_current);
+	    	$("#characters").addClass("current");
+	    }
+	    else if (new_current == "#downloads"){
+	    	alert(new_current);
+	    	$("#downloads").addClass("current");
+	    }
+	    else if (new_current == "#gallery"){
+	    	alert(new_current);
+	    	$("#gallery").addClass("current");
+	    }
+	    else if (new_current == "#trailer"){
+	    	alert(new_current);
+	    	$("#trailer").addClass("current");
+	    }
+		// if(imgLoc == "assets/img/icons/cloud_1.png"){ //checks to see if imgLoc is the same as "assets/img/icons/cloud_1.png"
+	 //    	var $current = $(".cloud1").attr("href"); //new var current holds href value of class cloud1
+		// 	$('.current').removeClass('current');//removes class current
+		// 	$current.addClass('current');
+		// }
+	});
+
+
 	//<==============CHARACTERS MODAL======================>
 
 	//$("body").append($overlay);
@@ -147,7 +182,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	});
 		 	
 	
-	//<=============DOWNLOADS TABS===============>
+	//<=============GALLERY TABS===============>
 	$(".side_button1 a img").click(function(event){
 		event.preventDefault();
 		var imgAlt = $(this).attr("alt");
@@ -163,7 +198,38 @@ document.addEventListener("DOMContentLoaded",function(){
 			$(".screenshot_text").hide();
 		}
 	});
+	
+
+	//<============GALLERY IMAGES===============>
+	var $overlay = $('<div id="overlay"></div>');
+	var $image = $("<img>");
+	//add image to overlay
+	$overlay.append($image);
+	//add overlay to body
+	
+	$(".gallery_content .image_list a img").click(function(event){
+		event.preventDefault();
+		$("#gallery").append($overlay);
+		var imgLoc = $(this).attr("src");
+		$image.attr("src", imgLoc);
+		$overlay.show();
+
+	})
+
+	//<=============DOWNLOAD IMAGES==============>
+
+	$(".download_content .image_list a img").click(function(event){
+		event.preventDefault();
+		$("#downloads").append($overlay);
+		var imgLoc = $(this).attr("src");
+		$image.attr("src", imgLoc);
+		$overlay.show();
+
+	})
+	$overlay.click(function(){
+		$overlay.hide();
+	})
 			
-			
+	
 
 });

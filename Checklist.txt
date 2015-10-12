@@ -5,14 +5,16 @@ paragraphs
 
 nav
 ===========
--slidein effect
--kick needs to go previous instead of next(fixed)
--always flicks back to plot page when a link is clicked
--nav menu needs to disappear after clicking an item
+-slidein effect (fixed)
+-kick needs to go previous instead of next (fixed)
+-always flicks back to plot page when a link is clicked (fixed)
+-nav menu needs to disappear after clicking an item (fixed)
+-recognise "current" section. fix conflict when using nav pop up menu and nav icons. (fixed)
 
 
 general
 ===========
-- make diff background on each section
+- make diff background on each section (fixed)
 - icon to download
 - modals
+- make images smaller, only to the size that we need
