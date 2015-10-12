@@ -135,7 +135,7 @@ hr {
 /*content text*/
 p {
 	font-weight: 400;
-	font-size: 16px;
+	font-size: 15px;
 	color: #c7dde4;
 	position: absolute;
 	top: 9em;
@@ -243,6 +243,8 @@ section {
 	background-size: cover;
 }
 .content {
+	position: absolute;
+	top: 12em;
 	height: 45%;
 	overflow: auto;
 }
@@ -267,15 +269,23 @@ section {
 	padding-left: 16%;
 	margin: 0;
 	width: 68%;
-	top: 40%;
+	top: 12em;
 	height: 43%;
 
 }
 
 .char_list img{
-	width: 61px;
+	width: 70px;
+	-webkit-filter:grayscale(100%);
+	filter:grayscale(100%);
+	filter:gray;
+	transition: all 1s ease-in-out;
 }
-
+.char_list img:hover{
+	-webkit-filter:grayscale(0);
+	filter:grayscale(0);
+	filter:gray;
+}
 .flex {
 	display: flex;
 	flex-direction: row;
@@ -357,7 +367,7 @@ section {
 }
 
 .download_content img{
-	width: 200px;
+	width: 250px;
 }
 .side_button {
 	position: absolute;
@@ -418,7 +428,7 @@ section {
 	list-style: none;
 }
 .gallery_content img{
-	width: 200px;
+	width: 250px;
 }
 
 .side_button1 {
@@ -442,6 +452,26 @@ section {
 .behind_scenes,
 .behind_text {
 	display: none;
+}
+
+#overlay{
+	height: 100vh;
+	width: 100%;
+	background: rgba(0,0,0, 0.8);
+	position: absolute;
+	top:0;
+	left: 0;
+	z-index: 2000;
+	display: none;
+	
+}
+
+#overlay img {
+	position: absolute;
+	margin-top: 25%;
+	width: 330px;
+	left: 50%;
+	margin-left: -165px;
 }
 
 /*Trailer Layer Layout
