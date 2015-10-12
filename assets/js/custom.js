@@ -56,33 +56,20 @@ document.addEventListener("DOMContentLoaded",function(){
 	//<===============NAV MENU=========================>
 	$(".nav_links").on("click",function(){
 		var new_current = $(this).attr("href");	//creates variable named imgLoc which stores the clicked link's href
-	    
 	    alert($(".current").attr("id"));
 	    $(".current").removeClass("current");
-	    if(new_current == "#plot"){
-	    	alert(new_current);
-	    	$("#plot").addClass("current");
+
+	    if(new_current == "#synopsis"){
+	    	$("#synopsis").addClass("current");
 	    } else if (new_current == "#characters"){
-	    	alert(new_current);
 	    	$("#characters").addClass("current");
 	    }
-	    else if (new_current == "#downloads"){
-	    	alert(new_current);
-	    	$("#downloads").addClass("current");
-	    }
 	    else if (new_current == "#gallery"){
-	    	alert(new_current);
 	    	$("#gallery").addClass("current");
-	    }
+	    }	    
 	    else if (new_current == "#trailer"){
-	    	alert(new_current);
 	    	$("#trailer").addClass("current");
-	    }
-		// if(imgLoc == "assets/img/icons/cloud_1.png"){ //checks to see if imgLoc is the same as "assets/img/icons/cloud_1.png"
-	 //    	var $current = $(".cloud1").attr("href"); //new var current holds href value of class cloud1
-		// 	$('.current').removeClass('current');//removes class current
-		// 	$current.addClass('current');
-		// }
+	    }		
 	});
 
 
@@ -151,76 +138,115 @@ document.addEventListener("DOMContentLoaded",function(){
 		
 	});
 	
-	//<=============DOWNLOADS TABS===============>
+	//<=============gallery TABS===============>
 	$(".side_button a img").click(function(event){
 		event.preventDefault();
 		var imgAlt = $(this).attr("alt");
 		if (imgAlt=="wallpapers"){
 			$(".wallpapers").show();
 			$(".posters").hide();
+			$(".screenshots").hide();
+			$(".behind_scenes").hide();
 			$(".soundtracks").hide();
 			$(".wallpaper_text").show();
 			$(".poster_text").hide();
 			$(".soundtrack_text").hide();
+			$(".screenshot_text").hide();
+			$(".behind_text").hide();
 			
 
 		} else if (imgAlt=="posters"){
-			$(".posters").show();
 			$(".wallpapers").hide();
+			$(".posters").show();
+			$(".screenshots").hide();
+			$(".behind_scenes").hide();
 			$(".soundtracks").hide();
+			$(".wallpaper_text").hide();
 			$(".poster_text").show();
-			$(".wallpaper_text").hide();			
 			$(".soundtrack_text").hide();
-		} else if (imgAlt=="soundtracks"){
-			$(".soundtracks").show();
+			$(".screenshot_text").hide();
+			$(".behind_text").hide();
+
+		} else if (imgAlt=="screenshots"){
 			$(".wallpapers").hide();
 			$(".posters").hide();
-			$(".soundtrack_text").show();
+			$(".screenshots").show();
+			$(".behind_scenes").hide();
+			$(".soundtracks").hide();
 			$(".wallpaper_text").hide();
-			$(".poster_text").hide();			
+			$(".poster_text").hide();
+			$(".soundtrack_text").hide();
+			$(".screenshot_text").show();
+			$(".behind_text").hide();
+
+		} else if (imgAlt=="behind the scenes"){
+			$(".wallpapers").hide();
+			$(".posters").hide();
+			$(".screenshots").hide();
+			$(".behind_scenes").show();
+			$(".soundtracks").hide();
+			$(".wallpaper_text").hide();
+			$(".poster_text").hide();
+			$(".soundtrack_text").hide();
+			$(".screenshot_text").hide();
+			$(".behind_text").show();
+		
+
+		} else if (imgAlt=="soundtracks"){
+			$(".wallpapers").hide();
+			$(".posters").hide();
+			$(".screenshots").hide();
+			$(".behind_scenes").hide();
+			$(".soundtracks").show();
+			$(".wallpaper_text").hide();
+			$(".poster_text").hide();
+			$(".soundtrack_text").show();
+			$(".screenshot_text").hide();
+			$(".behind_text").hide();		
 		}
 	});
 		 	
 	
 	//<=============GALLERY TABS===============>
-	$(".side_button1 a img").click(function(event){
-		event.preventDefault();
-		var imgAlt = $(this).attr("alt");
-		if (imgAlt=="screenshots"){
-			$(".screenshots").show();
-			$(".behind_scenes").hide();
-			$(".screenshot_text").show();
-			$(".behind_text").hide();
-		} else if (imgAlt=="behind the scenes"){
-			$(".behind_scenes").show();
-			$(".screenshots").hide();
-			$(".behind_text").show();
-			$(".screenshot_text").hide();
-		}
-	});
+	// $(".side_button1 a img").click(function(event){
+	// 	event.preventDefault();
+	// 	var imgAlt = $(this).attr("alt");
+	// 	if (imgAlt=="screenshots"){
+	// 		$(".screenshots").show();
+	// 		$(".behind_scenes").hide();
+	// 		$(".screenshot_text").show();
+	// 		$(".behind_text").hide();
+	// 	} else if (imgAlt=="behind the scenes"){
+	// 		$(".behind_scenes").show();
+	// 		$(".screenshots").hide();
+	// 		$(".behind_text").show();
+	// 		$(".screenshot_text").hide();
+	// 	}
+	// });
 	
 
 	//<============GALLERY IMAGES===============>
+	
+	//add overlay to body
+	
+	// $(".gallery_content .image_list a img").click(function(event){
+	// 	event.preventDefault();
+	// 	$("#gallery").append($overlay);
+	// 	var imgLoc = $(this).attr("src");
+	// 	$image.attr("src", imgLoc);
+	// 	$overlay.show();
+
+	// })
+
+	//<=============gallery IMAGES==============>
 	var $overlay = $('<div id="overlay"></div>');
 	var $image = $("<img>");
 	//add image to overlay
 	$overlay.append($image);
-	//add overlay to body
-	
+
 	$(".gallery_content .image_list a img").click(function(event){
 		event.preventDefault();
 		$("#gallery").append($overlay);
-		var imgLoc = $(this).attr("src");
-		$image.attr("src", imgLoc);
-		$overlay.show();
-
-	})
-
-	//<=============DOWNLOAD IMAGES==============>
-
-	$(".download_content .image_list a img").click(function(event){
-		event.preventDefault();
-		$("#downloads").append($overlay);
 		var imgLoc = $(this).attr("src");
 		$image.attr("src", imgLoc);
 		$overlay.show();

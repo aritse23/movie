@@ -22,6 +22,7 @@ h1 {
 ul {
 	margin: 0;
 	padding: 0;
+	list-style: none;
 }
 a {
 	text-decoration: none;
@@ -30,8 +31,7 @@ a {
 /*Homepage layout
 -------------------------------------------------*/
 
-header.movie_homepage {
-	
+header.movie_homepage {	
 	font-weight: 700;
 	color: rgba(210,0,0,1);
 	letter-spacing: 4px;	
@@ -42,9 +42,7 @@ header.movie_homepage {
 	top: 45%;
 	width: 100%;
 	text-align: center;
-
 }
-
 /*start button*/
 h2.button_start {
 	font-weight: 400;
@@ -66,23 +64,14 @@ h2.button_start {
 /*Start button on click*/
 h2.button_start:active {
 	color: rgba(210,0,0,1);
-	position: absolute;
-	top: 75%;
-	width: 100%;
-	text-align: center;
-	display: block;
-	height: 35px;
-	width: 100px;
-	border: 5px solid;
-	border-radius: 15px;
-	padding-top: 4px;
-	left:50%;
-    margin-left:-50px;
 }
 
 /*Container Layouts
 ------------------------------------*/
-
+section {
+	height: 100vh;
+	position: relative;
+}
 /*Header icon*/
 header.movie_name {
 	font-weight: 700;
@@ -128,10 +117,7 @@ hr {
 	border: 0;
 	position: absolute;
 	top: 7em;
-
 }
-
-
 /*content text*/
 p {
 	font-weight: 400;
@@ -142,7 +128,6 @@ p {
 	width: 70%;
 	left: 16%;
 }
-
 /*Footer Layout
 ---------------------------------*/
 footer {
@@ -152,9 +137,6 @@ footer {
 	background: rgba(0,0,0,0.5);
 	padding-top: 1em;
 	z-index: 1000;
-}
-.nav_bar {
-	z-index: -1;
 }
 .nav_icons {
 	display: flex;
@@ -173,16 +155,13 @@ footer {
 	width:35px;
 	opacity: 0.5;
 }
-
 .icons a img:active {
 	opacity: 1;
 }
-
 .kick:active {
 	transition: transform 0.5s;
 	transform: rotate(-45deg);
 }
-
 /*Nav Menu Layout
 --------------------------------*/
 .nav_menu {	
@@ -196,7 +175,6 @@ footer {
 	z-index: 1;
 	display: none;
 }
-
 .nav_list {
 	font-weight: 500;
 	display: flex;
@@ -210,32 +188,20 @@ footer {
 	opacity: 0.5;
 	text-align: center;
 }
-
-.nav_list li a img {
-	width: 35px;
-}
 .nav_list li a {
 	text-decoration: none;
 	color: rgba(255,255,255,1);
 }
-
+.nav_list li a img {
+	width: 35px;
+}
 .nav_list li a:hover,
 .nav_list li a:active {
 	color: rgba(210,0,0,1);
 }
-
-
-
-
-
-section {
-	height: 100vh;
-	position: relative;
-}
-
-/*Plot Layer Layout
+/*Synopsis Layer Layout
 ---------------------------------*/
-#plot{
+#synopsis{
 	background: url(../img/background/background_mobile_rotated_1.jpg) center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -248,7 +214,6 @@ section {
 	height: 45%;
 	overflow: auto;
 }
-
 /*Characters Layer Layout
 ---------------------------------*/
 #characters {
@@ -259,21 +224,17 @@ section {
 	background-size: cover;
 }
 .char_list {
-
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	list-style: none;
-	position: absolute;
-	
+	position: absolute;	
 	padding-left: 16%;
 	margin: 0;
 	width: 68%;
 	top: 12em;
 	height: 43%;
-
 }
-
 .char_list img{
 	width: 70px;
 	-webkit-filter:grayscale(100%);
@@ -291,7 +252,6 @@ section {
 	flex-direction: row;
 	justify-content: space-between;
 }
-
 .bio {
 	height: 100vh;
 	width: 100%;
@@ -302,7 +262,6 @@ section {
 	z-index: 2000;
 	display: none;
 }
-
 .exit img{
 	width: 50px;
 	margin-left: 80%;	
@@ -313,9 +272,7 @@ section {
 }
 .bio p img{
 	width: 98%;
-
 }
-
 .bio p {
 	font-weight: 400;
 	font-size: 15px;
@@ -327,88 +284,21 @@ section {
 	left: 16%;
 	overflow: auto;
 }
-
 .bio h3 {
 	top: 2em;	
 }
-
 /*used for layer number*/
 .bio h4 {	
 	top: 5em;
 }
-
 /*Red underline for layer name*/
 .bio hr {	
 	top: 5em;
 }
-
-/*Downloads Layer Layout
+/*gallery Layer Layout
 --------------------------------*/
-#downloads {
-	background: url(../img/background/background_mobile_rotated_3.jpg) center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-}
-.download_content{
-
-	position: absolute;
-	top: 12em;
-	padding-left: 16%;
-	margin: 0;
-	width: 80%;
-	height: 43%;
-	overflow: auto;
-}
-
-.download_content ul{
-	list-style: none;
-}
-
-.download_content img{
-	width: 250px;
-}
-.side_button {
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-	top: 12em;
-	left: 10px;
-	height: 43%;
-	z-index: 1000;
-
-}
-.side_button img {
-	width: 25px;
-	opacity: 0.5;
-}
-.side_button a img:active{
-	opacity: 1;
-}
-
-.type {
-	top: 9em;
-	padding-top: 2px;
-	padding-bottom: 2px;
-	letter-spacing: 3px;
-	background: rgba(0,0,0,0.8);
-	width: 80%;
-}
-
-.posters,
-.soundtracks,
-.poster_text,
-.soundtrack_text {
-	display: none;
-}
-
-
-/*Gallery Layer Layout
----------------------------------*/
 #gallery {
-	background: url(../img/background/background_mobile_rotated_4.jpg) center;
+	background: url(../img/background/background_mobile_rotated_3.jpg) center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -423,37 +313,46 @@ section {
 	height: 43%;
 	overflow: auto;
 }
-
-.gallery_content ul{
-	list-style: none;
-}
 .gallery_content img{
 	width: 250px;
 }
-
-.side_button1 {
+.side_button {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
+	justify-content: space-between;
 	top: 12em;
 	left: 10px;
 	height: 43%;
 	z-index: 1000;
 }
-.side_button1 img {
+.side_button img {
 	width: 25px;
 	opacity: 0.5;
 }
-.side_button1 a img:active{
+.side_button a img:active{
 	opacity: 1;
 }
-
+.type {
+	top: 9em;
+	left: 0;
+	padding-left: 16%;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	letter-spacing: 3px;
+	background: rgba(255,255,255,0.2);
+	width: 80%;
+}
+.posters,
+.soundtracks,
+.poster_text,
+.soundtrack_text,
 .behind_scenes,
-.behind_text {
+.behind_text,
+.screenshots,
+.screenshot_text {
 	display: none;
 }
-
 #overlay{
 	height: 100vh;
 	width: 100%;
@@ -463,9 +362,7 @@ section {
 	left: 0;
 	z-index: 2000;
 	display: none;
-	
 }
-
 #overlay img {
 	position: absolute;
 	margin-top: 25%;
@@ -473,35 +370,46 @@ section {
 	left: 50%;
 	margin-left: -165px;
 }
-
 /*Trailer Layer Layout
 ---------------------------------*/
 #trailer {
-	background: url(../img/background/background_mobile_rotated_5.jpg) center;
+	background: url(../img/background/background_mobile_rotated_4.jpg) center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
-	
 }
-
 .video {
 	position: absolute;
 	top: 40%;
 	width: 100%;
 }
-
 .video video{
 	display: block;
 	width: 100%;
 }
-
-
 /*media queries
 ---------------------------------------*/
 
- /*if screen is wider than smartphone size*/
-@media screen and (min-width: 960px) {
+ /*if screen is ipad size*/
+@media screen and (min-width: 680px) and (max-width: 960px){
+	/*used for layer name*/
+	h3 {top: 8em;}
+	/*used for layer number*/
+	h4 {top: 12em;}
+	/*Red underline for layer name*/
+	hr {top: 12em;}
+	/*content text*/
+	.content {top: 20em;}
+	.char_list {
+		top: 20em;
+		height: 55%;
+	}
+	.char_list img {width: 150px;}
+}
+
+
+@media screen and (min-width: 961px) {
 
 	/*change to a landscape background image*/
 	body {
@@ -511,64 +419,29 @@ section {
 		-moz-background-size: cover;
 		-o-background-size: cover;
 		background-size: cover;
+	}	
+	h3 {
+		left: 20%;
 	}
-	
-	/*increase left padding of text and headings*/
-	h3,
-	h4,
-	p {
-		padding-left: 20%;
+	/*used for layer number*/
+	h4 {
+		left: 20%;
 	}
-	p {
+	/*content text*/
+	.content {
+		top: 20em;
+		height: 55%;
+		padding: 0;
+		left: 20%;
+		width: 60%;
+		font-size: 18px;
+	}
+	.char_list {
+		top: 15em;
+		height: 55%;
+		padding: 0;
+		left: 20%;
 		width: 60%;
 	}
-	/*characters layout desktop*/
-	.dreams {
-		font-size: 50px;
-		
-		padding-top: 20%;
-		padding-left: 15%;
-
-	}
-
-	/*Trailer layout desktop*/
-	.video {
-		top: 30%;
-		width: 100%;
-	}
-	.video video{
-		display: block;
-		margin: 0 auto;
-		width: 60%;
-	}
-
-}
-
-/*layer control
----------------------------------------*/
-.homepage {
-	/*display: none;*/
-}
-.container{
-	/*display: none;*/
-}
-
-#plot {
-	/*display: none;*/
-}
-
-#characters{
-	/*display: none;*/
-}
-
-#downloads{
-	/*display: none;*/
-}
-
-#gallery{
-	/*display: none;*/
-}
-
-#trailer{
-	/*display: none;*/
+	.char_list img {width: 200px;}
 }

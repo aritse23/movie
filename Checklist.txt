@@ -15,6 +15,7 @@ nav
 general
 ===========
 - make diff background on each section (fixed)
-- icon to download
-- modals
+- icon to download (abort)
+- modals (fixed)
 - make images smaller, only to the size that we need
+- Scrollbar customise (abort)
