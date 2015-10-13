@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	        var top = $prev.offset().top;	        
 	        $('.current').removeClass('current');	      
 	        $('body').animate({
-	          scrollTop: top     
+	          scrollTop: top
 	        }, function () {
 	               $prev.addClass('current');
 	        });
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	//<===============NAV MENU=========================>
 	$(".nav_links").on("click",function(){
 		var new_current = $(this).attr("href");	//creates variable named imgLoc which stores the clicked link's href
-	    alert($(".current").attr("id"));
+	    //alert($(".current").attr("id"));
 	    $(".current").removeClass("current");
 
 	    if(new_current == "#synopsis"){
