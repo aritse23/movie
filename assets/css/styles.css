@@ -4,9 +4,6 @@ body {
 	background-color: #000;
 	background: url(../img/background/background_mobile_rotated.jpg) center;
 	height: 100vh;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;	
 }
 
@@ -139,6 +136,9 @@ footer {
 	z-index: 1000;
 }
 .nav_icons {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 	margin: 0;
@@ -147,8 +147,12 @@ footer {
 	-moz-flex-direction: row;
 	-ms-flex-direction: row;
 	-o-flex-direction: row;
-	flex-direction: row;
-	justify-content: space-around;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	        flex-direction: row;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
 }
 
 .icons a img{
@@ -159,8 +163,11 @@ footer {
 	opacity: 1;
 }
 .kick:active {
-	transition: transform 0.5s;
-	transform: rotate(-45deg);
+	-webkit-transition: -webkit-transform 0.5s;
+	        transition: transform 0.5s;
+	-webkit-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	        transform: rotate(-45deg);
 }
 /*Nav Menu Layout
 --------------------------------*/
@@ -168,18 +175,24 @@ footer {
 	position: relative;
 	background: rgba(0,0,0,.5);
 	height: 95vh;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 	z-index: 1;
 	display: none;
 }
 .nav_list {
 	font-weight: 500;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-justify-content: space-around;
+	    -ms-flex-pack: distribute;
+	        justify-content: space-around;
 	position: absolute;
 	height: 100%;
 	left: 50%;
@@ -203,9 +216,6 @@ footer {
 ---------------------------------*/
 #synopsis{
 	background: url(../img/background/background_mobile_rotated_1.jpg) center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 }
 .content {
@@ -218,15 +228,22 @@ footer {
 ---------------------------------*/
 #characters {
 	background: url(../img/background/background_mobile_rotated_2.jpg) center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 }
 .char_list {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	list-style: none;
 	position: absolute;	
 	left: 16%;
@@ -244,18 +261,31 @@ footer {
 	width: 70px;
 	-webkit-filter:grayscale(100%);
 	filter:grayscale(100%);
-	filter:gray;
-	transition: all 1s ease-in-out;
+	-webkit-filter:gray;
+	        filter:gray;
+	-webkit-transition: all 1s ease-in-out;
+	        transition: all 1s ease-in-out;
 }
 .char_list img:hover{
 	-webkit-filter:grayscale(0);
 	filter:grayscale(0);
-	filter:gray;
+	-webkit-filter:gray;
+	        filter:gray;
 }
 .flex {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 }
 
 .char_list2{
@@ -308,9 +338,6 @@ footer {
 --------------------------------*/
 #gallery {
 	background: url(../img/background/background_mobile_rotated_3.jpg) center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 }
 .gallery_content{
@@ -329,9 +356,18 @@ footer {
 .posters,
 .screenshots,
 .behind_scenes {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	    -ms-flex-wrap: wrap;
+	        flex-wrap: wrap;
 }
 
 .rslides {
@@ -426,7 +462,8 @@ footer {
 
 .slider3-pager .rslides_here a {
   background: transparent;
-  box-shadow: 0 0 0 2px #666;
+  -webkit-box-shadow: 0 0 0 2px #666;
+          box-shadow: 0 0 0 2px #666;
 }
 
 .slider3-pager a {
@@ -437,9 +474,19 @@ footer {
 }
 .side_button {
 	position: absolute;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
 	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	top: 12em;
 	left: 10px;
 	height: 43%;
@@ -494,9 +541,6 @@ footer {
 ---------------------------------*/
 #trailer {
 	background: url(../img/background/background_mobile_rotated_4.jpg) center;
-	-webkit-background-size: cover;
-	-moz-background-size: cover;
-	-o-background-size: cover;
 	background-size: cover;
 }
 .video {
@@ -612,9 +656,6 @@ MEDIA QUERIES
 	body {
 		background: url(../img/background/background_desktop_1.jpg) center;
 		height: 100vh;
-		-webkit-background-size: cover;
-		-moz-background-size: cover;
-		-o-background-size: cover;
 		background-size: cover;
 	}
 	/*used for movie name*/
@@ -660,21 +701,30 @@ MEDIA QUERIES
 		left: 20%;
 		width: 60%;
 		visibility: visible;
+		display: -webkit-box;
+		display: -webkit-flex;
+		display: -ms-flexbox;
 		display: flex;
-		justify-content: space-between;		
+		-webkit-box-pack: justify;
+		-webkit-justify-content: space-between;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;		
 	}
 	.char_list2 img:hover{
 		-webkit-filter:grayscale(0);
 		filter:grayscale(0);
-		filter:gray;
+		-webkit-filter:gray;
+		        filter:gray;
 	}
 
 	.char_list2 img {
 		width: 60px;
 		-webkit-filter:grayscale(100%);
 		filter:grayscale(100%);
-		filter:gray;
-		transition: all 0.5s ease-in-out;
+		-webkit-filter:gray;
+		        filter:gray;
+		-webkit-transition: all 0.5s ease-in-out;
+		        transition: all 0.5s ease-in-out;
 	}
 	.bio h3 {
 		top: 0em;	

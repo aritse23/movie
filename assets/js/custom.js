@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded",function(){
 	    }	    
 	    else if (new_current == "#trailer"){
 	    	$("#trailer").addClass("current");
-	    }		
+	    }
 	});
 
 
